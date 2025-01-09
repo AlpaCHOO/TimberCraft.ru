@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Столярная мастерская. Изделия из дерева ручной работы на заказ: мебель, декор и многое другое.">
+    <meta name="keywords" content="столярная мастерская, мебель на заказ, изделия из дерева, декор ручной работы">
+    <meta name="author" content="Столярная мастерская">
+    <title>Столярная мастерская</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #6b4226;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #8c5a3c;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #6b4226;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .portfolio img {
+            width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Столярная мастерская</h1>
+        <p>Эксклюзивные изделия из дерева ручной работы</p>
+    </header>
+    <nav>
+        <a href="#about">О нас</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы создаем мебель и декор, которые подчеркнут уникальность вашего интерьера. Наши изделия выполнены из экологически чистых материалов с любовью к деталям.</p>
+        </section>
+        <section id="portfolio">
+            <h2>Портфолио</h2>
+            <div class="portfolio">
+                <img src="example1.jpg" alt="Пример работы 1">
+                <img src="example2.jpg" alt="Пример работы 2">
+            </div>
+        </section>
+        <section id="services">
+            <h2>Услуги</h2>
+            <ul>
+                <li>Изготовление мебели на заказ (столы, полки, стулья).</li>
+                <li>Создание декоративных элементов интерьера.</li>
+                <li>Ремонт деревянных изделий.</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Телефон: +7 (123) 456-78-90</p>
+            <p>Email: info@stolyarnaya-master.ru</p>
+            <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
+            <form action="#" method="POST">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+                <label for="message">Сообщение:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Столярная мастерская. Все права защищены.</p>
+    </footer>
+</body>
+</html>
