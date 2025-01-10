@@ -3,70 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TimberWood - Искусство дерева: эксклюзивные изделия из дерева ручной работы, мебель и декор.">
-    <meta name="keywords" content="мебель, дерево, декор, изделия на заказ">
+    <meta name="description" content="TimberWood - Элегантная столярная мастерская, создающая мебель ручной работы и дизайнерские решения для вашего интерьера.">
+    <meta name="keywords" content="TimberWood, столярная мастерская, мебель на заказ, изделия из дерева, декор ручной работы">
     <meta name="author" content="TimberWood">
-    <title>TimberWood - Искусство дерева</title>
+    <title>TimberWood</title>
     <style>
-        /* Общие стили */
+        /* Основные стили */
         body {
+            font-family: 'Roboto', sans-serif;
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f8f8;
+            padding: 0;
+            background-color: #f9f9f9;
             color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
         header {
-            background: url('https://source.unsplash.com/1920x1080/?wood') no-repeat center center/cover;
+            background: linear-gradient(135deg, #3a2a20, #6b4226);
             color: #fff;
+            padding: 60px 20px;
             text-align: center;
-            padding: 80px 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             margin: 0;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
         }
 
         header p {
-            font-size: 1.5rem;
-            margin-top: 20px;
+            font-size: 1.2rem;
+            margin: 10px 0 0;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #6b4226;
-            padding: 15px 0;
+            background-color: #8c5a3c;
+            padding: 10px 0;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 50px;
             font-size: 1rem;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            color: #f0c040;
+            background: #6b4226;
+            color: #fdfdfd;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: url('hero-background.jpg') center/cover no-repeat;
+            height: 80vh;
+            color: #fff;
+            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0 0;
+        }
+
+        .hero button {
+            margin-top: 30px;
+            padding: 10px 30px;
+            font-size: 1.2rem;
+            background: #6b4226;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero button:hover {
+            background: #8c5a3c;
+            transform: scale(1.1);
         }
 
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 20px;
-        }
-
-        section {
-            margin: 40px 0;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #6b4226;
         }
 
         .portfolio {
@@ -78,30 +119,13 @@
         .portfolio img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
+            border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .portfolio img:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .services ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .services li {
-            background: #f0f0f0;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        .services li:hover {
-            background: #f7e3d1;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         footer {
@@ -109,6 +133,8 @@
             color: #fff;
             text-align: center;
             padding: 20px 0;
+            margin-top: 40px;
+            box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.3);
         }
 
         footer p {
@@ -119,58 +145,59 @@
 <body>
     <header>
         <h1>TimberWood</h1>
-        <p>Искусство дерева для вашего дома</p>
+        <p>Элегантная мебель и декор из дерева ручной работы</p>
     </header>
-
     <nav>
         <a href="#about">О нас</a>
         <a href="#portfolio">Портфолио</a>
         <a href="#services">Услуги</a>
         <a href="#contact">Контакты</a>
     </nav>
-
+    <div class="hero">
+        <h1>Добро пожаловать в TimberWood</h1>
+        <p>Создаем красоту из дерева, вдохновленную природой</p>
+        <button>Связаться с нами</button>
+    </div>
     <div class="container">
         <section id="about">
             <h2>О нас</h2>
-            <p>TimberWood - это искусство обработки дерева, воплощенное в уникальных изделиях, которые подчеркнут вашу индивидуальность. Мы создаем мебель и декор с душой.</p>
+            <p>TimberWood — это команда профессионалов, которые создают уникальные изделия из дерева. Мы стремимся подчеркнуть красоту натуральных материалов и индивидуальность каждого проекта.</p>
         </section>
-
         <section id="portfolio">
             <h2>Портфолио</h2>
             <div class="portfolio">
-                <img src="https://source.unsplash.com/600x400/?furniture,wood" alt="Пример работы 1">
-                <img src="https://source.unsplash.com/600x400/?wood,craft" alt="Пример работы 2">
-                <img src="https://source.unsplash.com/600x400/?interior,wood" alt="Пример работы 3">
+                <img src="example1.jpg" alt="Пример работы 1">
+                <img src="example2.jpg" alt="Пример работы 2">
+                <img src="example3.jpg" alt="Пример работы 3">
             </div>
         </section>
-
         <section id="services">
             <h2>Услуги</h2>
-            <div class="services">
-                <ul>
-                    <li>Изготовление мебели на заказ.</li>
-                    <li>Создание декоративных элементов интерьера.</li>
-                    <li>Реставрация деревянных изделий.</li>
-                </ul>
-            </div>
+            <ul>
+                <li>Изготовление мебели на заказ.</li>
+                <li>Создание декоративных элементов интерьера.</li>
+                <li>Реставрация и ремонт деревянных изделий.</li>
+            </ul>
         </section>
-
         <section id="contact">
             <h2>Контакты</h2>
             <p>Телефон: +7 (123) 456-78-90</p>
             <p>Email: info@timberwood.ru</p>
+            <p>Адрес: Москва, ул. Примерная, д. 1</p>
             <form action="#" method="POST">
-                <label for="name">Имя:</label><br>
+                <label for="name">Имя:</label>
                 <input type="text" id="name" name="name" required><br>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required><br>
                 <label for="message">Сообщение:</label><br>
                 <textarea id="message" name="message" rows="4" required></textarea><br>
                 <button type="submit">Отправить</button>
             </form>
         </section>
     </div>
-
     <footer>
         <p>&copy; 2025 TimberWood. Все права защищены.</p>
     </footer>
 </body>
 </html>
+
