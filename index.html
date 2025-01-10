@@ -140,6 +140,20 @@
         footer p {
             margin: 0;
         }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .hero button {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -156,7 +170,7 @@
     <div class="hero">
         <h1>Добро пожаловать в TimberWood</h1>
         <p>Создаем красоту из дерева, вдохновленную природой</p>
-        <button>Связаться с нами</button>
+        <a href="#contact"><button>Связаться с нами</button></a>
     </div>
     <div class="container">
         <section id="about">
@@ -197,6 +211,10 @@
     </div>
     <footer>
         <p>&copy; 2025 TimberWood. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+
     </footer>
 </body>
 </html>
