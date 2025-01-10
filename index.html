@@ -3,148 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TimberWood - профессиональные изделия из дерева: мебель, декор и проектные решения.">
-    <title>TimberWood</title>
+    <meta name="description" content="TimberWood - Искусство дерева: эксклюзивные изделия из дерева ручной работы, мебель и декор.">
+    <meta name="keywords" content="мебель, дерево, декор, изделия на заказ">
+    <meta name="author" content="TimberWood">
+    <title>TimberWood - Искусство дерева</title>
     <style>
         /* Общие стили */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
+            margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f8f8f8;
             color: #333;
-            line-height: 1.6;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
         }
 
-        /* Шапка сайта */
         header {
-            background: linear-gradient(90deg, #4d3b2b, #8c5a3c);
+            background: url('https://source.unsplash.com/1920x1080/?wood') no-repeat center center/cover;
             color: #fff;
-            padding: 20px 0;
             text-align: center;
-        }
-        header h1 {
-            font-size: 3em;
-            letter-spacing: 2px;
+            padding: 80px 20px;
         }
 
-        /* Меню навигации */
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
         nav {
-            background: #6b4226;
-            padding: 10px;
             display: flex;
             justify-content: center;
-            gap: 15px;
+            background-color: #6b4226;
+            padding: 15px 0;
         }
+
         nav a {
             color: #fff;
-            padding: 10px 20px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s ease;
         }
+
         nav a:hover {
-            background: #8c5a3c;
+            color: #f0c040;
         }
 
-        /* Секции */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
         section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        section:nth-child(even) {
-            background-color: #f2f2f2;
+            margin: 40px 0;
         }
 
-        /* О нас */
-        #about h2 {
-            font-size: 2.5em;
+        h2 {
+            font-size: 2.5rem;
             margin-bottom: 20px;
-        }
-        #about p {
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 0 auto;
+            color: #6b4226;
         }
 
-        /* Портфолио */
         .portfolio {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
+
         .portfolio img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-            transition: transform 0.3s;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .portfolio img:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Услуги */
-        #services ul {
+        .services ul {
             list-style: none;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        #services li {
-            font-size: 1.2em;
-            margin: 10px 0;
+            padding: 0;
         }
 
-        /* Контакты */
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 400px;
-            margin: 20px auto;
-        }
-        form input, form textarea, form button {
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
+        .services li {
+            background: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 10px;
             border-radius: 5px;
-            font-size: 1em;
-        }
-        form button {
-            background: #4d3b2b;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        form button:hover {
-            background: #6b4226;
+            transition: background 0.3s ease;
         }
 
-        /* Футер */
+        .services li:hover {
+            background: #f7e3d1;
+        }
+
         footer {
-            background: #333;
+            background-color: #333;
             color: #fff;
-            padding: 10px 0;
             text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <!-- Шапка сайта -->
     <header>
         <h1>TimberWood</h1>
-        <p>Искусство деревянных изделий</p>
+        <p>Искусство дерева для вашего дома</p>
     </header>
 
-    <!-- Навигация -->
     <nav>
         <a href="#about">О нас</a>
         <a href="#portfolio">Портфолио</a>
@@ -152,44 +129,46 @@
         <a href="#contact">Контакты</a>
     </nav>
 
-    <!-- О нас -->
-    <section id="about">
-        <h2>О нас</h2>
-        <p>Мы создаем уникальные изделия из дерева, которые подчеркнут индивидуальность вашего интерьера. Наша команда профессионалов делает всё с душой и вниманием к деталям.</p>
-    </section>
+    <div class="container">
+        <section id="about">
+            <h2>О нас</h2>
+            <p>TimberWood - это искусство обработки дерева, воплощенное в уникальных изделиях, которые подчеркнут вашу индивидуальность. Мы создаем мебель и декор с душой.</p>
+        </section>
 
-    <!-- Портфолио -->
-    <section id="portfolio">
-        <h2>Портфолио</h2>
-        <div class="portfolio">
-            <img src="https://via.placeholder.com/300x200" alt="Пример работы 1">
-            <img src="https://via.placeholder.com/300x200" alt="Пример работы 2">
-            <img src="https://via.placeholder.com/300x200" alt="Пример работы 3">
-        </div>
-    </section>
+        <section id="portfolio">
+            <h2>Портфолио</h2>
+            <div class="portfolio">
+                <img src="https://source.unsplash.com/600x400/?furniture,wood" alt="Пример работы 1">
+                <img src="https://source.unsplash.com/600x400/?wood,craft" alt="Пример работы 2">
+                <img src="https://source.unsplash.com/600x400/?interior,wood" alt="Пример работы 3">
+            </div>
+        </section>
 
-    <!-- Услуги -->
-    <section id="services">
-        <h2>Услуги</h2>
-        <ul>
-            <li>Изготовление мебели на заказ</li>
-            <li>Создание декоративных элементов интерьера</li>
-            <li>Ремонт деревянных изделий</li>
-        </ul>
-    </section>
+        <section id="services">
+            <h2>Услуги</h2>
+            <div class="services">
+                <ul>
+                    <li>Изготовление мебели на заказ.</li>
+                    <li>Создание декоративных элементов интерьера.</li>
+                    <li>Реставрация деревянных изделий.</li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- Контакты -->
-    <section id="contact">
-        <h2>Контакты</h2>
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Ваше имя" required>
-            <input type="email" name="email" placeholder="Ваш Email" required>
-            <textarea name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
-            <button type="submit">Отправить</button>
-        </form>
-    </section>
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Телефон: +7 (123) 456-78-90</p>
+            <p>Email: info@timberwood.ru</p>
+            <form action="#" method="POST">
+                <label for="name">Имя:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="message">Сообщение:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </div>
 
-    <!-- Футер -->
     <footer>
         <p>&copy; 2025 TimberWood. Все права защищены.</p>
     </footer>
