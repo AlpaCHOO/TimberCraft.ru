@@ -8,7 +8,6 @@
     <meta name="author" content="TimberWood">
     <title>TimberWood</title>
     <style>
-        /* Основные стили */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -16,7 +15,6 @@
             background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         header {
@@ -24,17 +22,6 @@
             color: #fff;
             padding: 60px 20px;
             text-align: center;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin: 10px 0 0;
         }
 
         nav {
@@ -42,10 +29,8 @@
             justify-content: center;
             background-color: #8c5a3c;
             padding: 10px 0;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
             position: sticky;
             top: 0;
-            z-index: 1000;
         }
 
         nav a {
@@ -53,55 +38,6 @@
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 10px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background: #6b4226;
-            color: #fdfdfd;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-            transform: scale(1.1);
-        }
-
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            background: url('hero-background.jpg') center/cover no-repeat;
-            height: 80vh;
-            color: #fff;
-            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin: 0;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin: 20px 0 0;
-        }
-
-        .hero button {
-            margin-top: 30px;
-            padding: 10px 30px;
-            font-size: 1.2rem;
-            background: #6b4226;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .hero button:hover {
-            background: #8c5a3c;
-            transform: scale(1.1);
         }
 
         .container {
@@ -133,26 +69,16 @@
             color: #fff;
             text-align: center;
             padding: 20px 0;
+        }
+
+        .upload-form {
             margin-top: 40px;
-            box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
         }
 
-        footer p {
-            margin: 0;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .hero button {
-                font-size: 1rem;
-            }
+        .upload-form input[type="file"] {
+            display: block;
+            margin: 10px auto;
         }
     </style>
 </head>
@@ -162,59 +88,73 @@
         <p>Элегантная мебель и декор из дерева ручной работы</p>
     </header>
     <nav>
-        <a href="#about">О нас</a>
         <a href="#portfolio">Портфолио</a>
-        <a href="#services">Услуги</a>
-        <a href="#contact">Контакты</a>
+        <a href="#upload">Добавить фото</a>
     </nav>
-    <div class="hero">
-        <h1>Добро пожаловать в TimberWood</h1>
-        <p>Создаем красоту из дерева, вдохновленную природой</p>
-        <a href="#contact"><button>Связаться с нами</button></a>
-    </div>
     <div class="container">
-        <section id="about">
-            <h2>О нас</h2>
-            <p>TimberWood — это команда профессионалов, которые создают уникальные изделия из дерева. Мы стремимся подчеркнуть красоту натуральных материалов и индивидуальность каждого проекта.</p>
-        </section>
         <section id="portfolio">
             <h2>Портфолио</h2>
-            <div class="portfolio">
+            <h3>Пивотека 437</h3>
+            <p>Проект по созданию мебели для Пивотеки 437.</p>
+            <div class="portfolio" id="gallery">
                 <img src="example1.jpg" alt="Пример работы 1">
                 <img src="example2.jpg" alt="Пример работы 2">
                 <img src="example3.jpg" alt="Пример работы 3">
             </div>
         </section>
-        <section id="services">
-            <h2>Услуги</h2>
-            <ul>
-                <li>Изготовление мебели на заказ.</li>
-                <li>Создание декоративных элементов интерьера.</li>
-                <li>Реставрация и ремонт деревянных изделий.</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Контакты</h2>
-            <p>Телефон: +7 (123) 456-78-90</p>
-            <p>Email: info@timberwood.ru</p>
-            <p>Адрес: Москва, ул. Примерная, д. 1</p>
-            <form action="#" method="POST">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required><br>
-                <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" required><br>
-                <label for="message">Сообщение:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br>
-                <button type="submit">Отправить</button>
+
+        <section id="upload">
+            <h2>Загрузить новые фотографии</h2>
+            <form class="upload-form" id="uploadForm" enctype="multipart/form-data">
+                <input type="file" name="file" id="fileInput" accept="image/*" required>
+                <button type="submit">Загрузить</button>
             </form>
+            <p id="uploadStatus"></p>
         </section>
     </div>
     <footer>
         <p>&copy; 2025 TimberWood. Все права защищены.</p>
     </footer>
-</body>
-</html>
+    <script>
+        // Загрузка фотографий с клиента на сервер
+        const uploadForm = document.getElementById('uploadForm');
+        const gallery = document.getElementById('gallery');
+        const uploadStatus = document.getElementById('uploadStatus');
 
-    </footer>
+        uploadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                uploadStatus.textContent = 'Пожалуйста, выберите файл.';
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    const newImage = document.createElement('img');
+                    newImage.src = result.filePath; // Путь к загруженному файлу
+                    newImage.alt = file.name;
+                    gallery.appendChild(newImage);
+
+                    uploadStatus.textContent = 'Файл успешно загружен!';
+                } else {
+                    uploadStatus.textContent = 'Ошибка при загрузке файла.';
+                }
+            } catch (error) {
+                uploadStatus.textContent = 'Произошла ошибка: ' + error.message;
+            }
+        });
+    </script>
 </body>
 </html>
